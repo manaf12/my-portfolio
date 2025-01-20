@@ -1,0 +1,212 @@
+@use "../../app.scss" as app ;
+
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
+  @include app.tablet {
+    padding: 15px;
+  }
+
+  @include app.mobile {
+    padding: 10px;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    @include app.tablet {
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+
+      @include app.mobile {
+        font-size: 16px;
+      }
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include app.tablet {
+        width: 80%;
+      }
+
+      @include app.mobile {
+        width: 90%;
+      }
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include app.tablet {
+      gap: 15px;
+    }
+
+    @include app.mobile {
+      gap: 10px;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      @include app.tablet {
+        gap: 30px;
+      }
+
+      @include app.mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include app.tablet {
+          width: 250px;
+          height: 80px;
+        }
+
+        @include app.mobile {
+          width: 200px;
+          height: 50px;
+        }
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include app.tablet {
+          font-size: 72px;
+        }
+
+        @include app.mobile {
+          font-size: 36px;
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        @include app.tablet {
+          width: 200px;
+          height: 80px;
+          font-size: 18px;
+        }
+
+        @include app.mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1366px;
+    margin: auto;
+
+    @include app.tablet {
+      gap: 15px;
+      grid-template-columns: 1fr;
+
+    }
+
+    @include app.mobile {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border: 0.5px solid gray;
+      border-radius: 10px;
+      background-color: #111132;
+
+      @include app.tablet {
+        padding: 15px;
+      }
+
+      @include app.mobile {
+        padding: 10px;
+      }
+
+      h2 {
+        font-size: 24px;
+        color: white;
+        text-align: center;
+
+        @include app.tablet {
+          font-size: 22px;
+        }
+
+        @include app.mobile {
+          font-size: 20px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: gray;
+        text-align: center;
+        margin: 10px 0;
+
+        @include app.tablet {
+          font-size: 15px;
+        }
+
+        @include app.mobile {
+          font-size: 14px;
+        }
+      }
+
+      
+    }
+  }
+}

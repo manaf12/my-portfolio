@@ -1,0 +1,133 @@
+@use "../../app.scss";
+
+.contact {
+  height: auto;
+  min-height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  @include app.tablet {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @include app.mobile {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include app.tablet {
+      text-align: center;
+      align-items: center;
+    }
+
+    @include app.mobile {
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
+      color: orange;
+      @include app.tablet {
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      @include app.mobile {
+        font-size: 36px;
+        line-height: 48px;
+      }
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+
+    @include app.tablet {
+      padding: 30px;
+      width: 100%;
+    }
+
+    @include app.mobile {
+      padding: 20px;
+      
+    }
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      
+    
+      @include app.mobile {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+
+        @include app.tablet {
+          padding: 15px;
+        }
+
+        @include app.mobile {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
+        font-weight: 500;
+
+        @include app.tablet {
+          padding: 15px;
+        }
+
+        @include app.mobile {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
