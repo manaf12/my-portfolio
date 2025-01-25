@@ -1,4 +1,6 @@
+// hero.scss
 @use "../../app.scss" as app;
+
 .hero {
   height: calc(100vh - 100px);
   overflow: hidden;
@@ -17,55 +19,129 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
-
+      padding: 0 25px;
       @include app.mobile {
-        height: 100%;
         width: 100%;
-        gap: 20px;
+        gap: 25px;
         align-items: center;
         text-align: center;
-
+        padding: 0 15px;
       }
 
       h2 {
-        font-size: 30px;
+        font-size: 40px;
         color: rebeccapurple;
-        letter-spacing: 10px;
-        @include app.mobile{
-          display: hidden;
-        }
+        letter-spacing: 2px;
+        
+       
       }
 
       h1 {
         font-size: 64px;
+        background: linear-gradient(45deg, #fff, orange);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        
         @include app.tablet {
-          font-size: 36px;
+          font-size: 42px;
         }
         @include app.mobile {
-          font-size: 26px;
-        
+          font-size: 32px;
+          line-height: 1.2;
         }
       }
 
       .buttons {
-        button {
-          padding: 20px;
-          border: 1px solid white;
-          border-radius: 10px;
-          background-color: transparent;
-          color: white;
-          margin-right: 20px;
-          font-weight: 300;
-          cursor: pointer;
-      
+        display: flex;
+        gap: 20px;
+        z-index: 1;
+        flex-wrap: wrap;
+
+        @include app.mobile {
+          flex-direction: column;
+          width: 100%;
+          gap: 15px;
+          padding: 0 20px
+     
         }
 
-        z-index: 1;
-       
+        button {
+          padding: 18px 35px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50px;
+          background: rgba(255, 255, 255, 0.05);
+          color: white;
+          font-weight: 500;
+          cursor: pointer;
+          backdrop-filter: blur(5px);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          @include app.mobile {
+            width: auto;
+            max-width: 300px;
+            margin: 0 auto;
+            justify-content: center;
+            padding: 15px 25px;
+            font-size: 16px;
+          }
+
+          span {
+            position: relative;
+            z-index: 1;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              45deg,
+              transparent,
+              // rgba(255, 165, 0, 0.2),
+              transparent
+            );
+            transition: 0.5s;
+          }
+
+     
+          &::before {
+            width: calc(100% + 40px); 
+            left: -20px; 
+          }
+    
+          &:hover::before {
+            left: calc(100% + 20px);
+          }
+        }
+
+        .portfolio-btn {
+          border-color: orange;
+          color: orange;
+        }
+
+        .contact-btn {
+          border-color: rebeccapurple;
+          color: rebeccapurple;
+        }
       }
 
       img {
         width: 50px;
+        margin-top: 20px;
+
+        @include app.mobile {
+          width: 40px;
+        }
       }
     }
   }
@@ -75,17 +151,16 @@
     position: absolute;
     top: 0;
     right: 0;
+    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.2));
 
     @include app.mobile {
-     
       display: none;
     }
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-  
     }
   }
 

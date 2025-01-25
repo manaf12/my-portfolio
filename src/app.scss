@@ -1,6 +1,8 @@
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   * {
@@ -13,6 +15,7 @@ html {
   body {
     background-color: #0c0c1d;
     color: lightgray;
+
   }
   
   a {
@@ -21,10 +24,9 @@ html {
   }
   
   section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-    scroll-snap-align: center;
-    overflow-x: hidden;
+    // scroll-snap-align:center;
   }
   
   @mixin mobile {

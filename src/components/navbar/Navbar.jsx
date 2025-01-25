@@ -6,7 +6,6 @@ const Navbar = () => {
   
   return (
     <div className="navbar">
-      {/* Sidebar */}
       <Sidebar/>
       <div className="wrapper">
         <motion.span
@@ -22,10 +21,10 @@ const Navbar = () => {
             <img src="/facebook.png" alt="" />
           </a>
           <a href="https://www.linkedin.com/in/manaf-saoub/">
-            <img src="/linkedinw.png"  alt="" />
+            <img src="/linkedin.png"  alt="" />
           </a>
           <a href="https://github.com/manaf12">
-            <img src="/githubw.png"  alt="" />
+            <img src="/github.png"  alt="" />
           </a>
         </div>
       </div>

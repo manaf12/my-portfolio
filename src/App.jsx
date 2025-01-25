@@ -17,19 +17,12 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
-      {/* <section id="Services">
-        <Parallax type="services" />
-      </section> */}
       <section id="Services">
         <Services />
       </section>
-      {/* <section id="Portfolio">
-        <Parallax type="portfolio" />
-      </section> */}
-      {/* <section>
-        
-      </section> */}
+      <section id="Portfolio">
       <Portfolio />
+      </section>
       <section id="Contact">
         <Contact />
       </section>

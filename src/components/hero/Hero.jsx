@@ -2,47 +2,41 @@ import "./hero.scss";
 import { motion } from "framer-motion";
 
 const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
+  initial: { x: -500, opacity: 0 },
   animate: {
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
+    transition: { duration: 1, staggerChildren: 0.1 },
   },
   scrollButton: {
     opacity: 0,
     y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
+    transition: { duration: 2, repeat: Infinity },
   },
 };
-const sliderVariants = {
-  initial: {
-    x: 0,
+
+const buttonVariants = {
+  hover: {
+    y: -5,
+    background: "rgba(255, 165, 0, 0.1)",
+    borderColor: "orange",
+    transition: { type: "spring", stiffness: 300 },
   },
+  tap: { scale: 0.95 },
+};
+
+const sliderVariants = {
+  initial: { x: 0 },
   animate: {
     x: "-220%",
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 20,
-    },
+    transition: { repeat: Infinity, repeatType: "mirror", duration: 20 },
   },
 };
 
 const Hero = () => {
   const handleScroll = (targetId) => {
     const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
+    targetElement?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -56,42 +50,44 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>I'm Manaf Alsaoub</motion.h2>
           <motion.h1 variants={textVariants}>
-            Web developer and UI designer
+            Web Developer & UI Designer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
-          <motion.button
+
+          <motion.div className="buttons">
+            <motion.button
               onClick={() => handleScroll("Portfolio")}
-              variants={textVariants}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+              className="portfolio-btn"
             >
-              See the Latest Works
+              <span>🚀 Latest Works</span>
             </motion.button>
 
-            {/* Button to scroll to Contact */}
             <motion.button
               onClick={() => handleScroll("Contact")}
-              variants={textVariants}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+              className="contact-btn"
             >
-              Contact Me
+              <span>📬 Contact Me</span>
             </motion.button>
           </motion.div>
-          <motion.img
-            variants={textVariants}
-            animate="scrollButton"
-            src="/scroll.png"
-            alt=""
-          />
         </motion.div>
       </div>
+
       <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+        Web Developer
       </motion.div>
+
       <div className="imageContainer">
-        <img src="/me.png" alt="" />
+        <img src="/me.png" alt="Profile" />
       </div>
     </div>
   );
