@@ -58,14 +58,6 @@ const Services = () => {
               <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
               Business.
             </h1>
-            <motion.div 
-              className="actionPill"
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span>WHAT CAN I HELP</span>
-              <div className="arrow">→</div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
