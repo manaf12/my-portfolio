@@ -21,7 +21,7 @@ const projects = [
     img: "blog.png",
     desc: "Developed a dynamic and user-friendly web application using the MERN stack. Implemented secure and scalable authentication with Clerk. Optimized image handling and performance through ImageKit, featuring advanced image optimization and lazy loading techniques. Integrated infinite scrolling functionality with TanStack and Axios to provide a smooth and engaging data browsing experience.",
     github:"https://github.com/manaf12/full-stack-mern-blog-project-",
-    live:"blog-app-manafs-projects-7a962bb5.vercel.app"
+    live:"https://blog-app-manafs-projects-7a962bb5.vercel.app"
     
   },
   {
