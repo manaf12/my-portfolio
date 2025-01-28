@@ -67,6 +67,7 @@
       @include app.tablet {
         flex-direction: column;
         text-align: center;
+        width: 250px;
       }
 
       .icon-box {
