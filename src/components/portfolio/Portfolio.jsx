@@ -18,9 +18,11 @@ const projects = [
   {
     id: 1,
     title: "Mern full stack blog app",
-    img: "first-img.jpg",
+    img: "blog.png",
     desc: "Developed a dynamic and user-friendly web application using the MERN stack. Implemented secure and scalable authentication with Clerk. Optimized image handling and performance through ImageKit, featuring advanced image optimization and lazy loading techniques. Integrated infinite scrolling functionality with TanStack and Axios to provide a smooth and engaging data browsing experience.",
-    github:"https://github.com/manaf12/full-stack-mern-blog-project-"
+    github:"https://github.com/manaf12/full-stack-mern-blog-project-",
+    live:"blog-app-manafs-projects-7a962bb5.vercel.app"
+    
   },
   {
     id: 2,
@@ -93,7 +95,7 @@ return (
                 </button>
               )}
             </div>
-            
+            <div className="buttonlinks">
             <a 
               href={project.github} 
               className="github-link"
@@ -105,6 +107,17 @@ return (
               </svg>
               View Code
             </a>
+            <a 
+              href={project.live} 
+              className="github-link"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Live 
+            </a>
+
+            </div>
+         
           </div>
         </motion.article>
       ))}
