@@ -37,7 +37,7 @@ const Portfolio = () => {
       img: "dashboard.png",
       desc: "React Admin Panel UI, designed with React Router DOM 6 for navigation, and utilizes Material-UI (MUI) for tables, data grids, and components. The dashboard includes reusable widgets, a Progress Bar, and interactive charts, along with a dynamic Single Item Page and Form Page Design. It also supports Dark Mode via the Context API and smooth navigation with React Router DOM Links.",
       github: "https://github.com/manaf12/Admin-Dashboard",
-      live: "admin-dashboard-phi-sage-38.vercel.app"
+      live: "https://admin-dashboard-phi-sage-38.vercel.app/"
     },
     {
       id: 4,
