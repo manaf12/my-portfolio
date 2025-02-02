@@ -11,22 +11,34 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    padding-left: 20px;
     padding-right: 20px;
-
+    
     @include app.mobile {
       justify-content: flex-end;
       padding: 20px;
     }
 
-    span {
-      font-weight: bold;
-      margin-left: 90px;
 
+      
+      .links{
+
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+ font-weight: bold;
+        a{
+          font-size: 20px;
+          color: white;
+        }
+        @include app.tablet{
+          display: none;
+        }
+      }
       @include app.mobile {
         display: none;
       }
-    }
+    
 
     .social {
       display: flex;
@@ -45,6 +57,13 @@
 
      
       }
+    }
+  }
+  .mobile-menu{
+    display: none;
+
+    @include app.tablet{
+      display: block;
     }
   }
 }
