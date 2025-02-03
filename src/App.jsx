@@ -5,7 +5,7 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
-
+import Tools from "./components/tools/Tools";
 
 const App = () => {
 
@@ -20,8 +20,11 @@ const App = () => {
       <section id="Services">
         <Services />
       </section>
-      <section id="Portfolio">
+      <section id="Projects">
       <Portfolio />
+      </section>
+      <section id="tools">
+        <Tools/>
       </section>
       <section id="Contact">
         <Contact />

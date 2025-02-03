@@ -87,7 +87,7 @@ const Contact = () => {
             <input 
               type="text" 
               required 
-              placeholder="Name" 
+              placeholder="Hi [Your Name], I need help with..." 
               name="name" 
               className="glow-input"
             />

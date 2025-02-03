@@ -1,0 +1,182 @@
+// tools.scss
+@use "../../app.scss" as app;
+
+.tools {
+  background: linear-gradient(180deg,#0c0c1d,#111132);
+  padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
+
+  .headerSection {
+    max-width: 1366px;
+    margin: 0 auto 3rem;
+  }
+
+  .textContainer {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    p {
+      font-size: 1.6rem;
+      color: #888;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      @include app.mobile { font-size: 1.3rem; }
+    }
+
+    hr {
+      width: 50%;
+      margin: 0 auto;
+      border: 1px solid rgba(255, 165, 0, 0.3);
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.1);
+    }
+  }
+
+  .titleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    .title {
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: white;
+        @include app.mobile { font-size: 2rem; }
+      }
+    }
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .toolCard {
+    background: rgba(17, 17, 50, 0.6);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 165, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(25, 25, 60, 0.8);
+      box-shadow: 0 10px 30px rgba(255, 165, 0, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .cardContent {
+      position: relative;
+      z-index: 1;
+
+      .iconWrapper {
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        .iconGlow {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          background: radial-gradient(rgba(255,165,0,0.3), transparent 70%);
+          filter: blur(20px);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .icon {
+          font-size: 3.5rem;
+          filter: drop-shadow(0 0 10px rgba(255,165,0,0.3));
+          transition: all 0.3s ease;
+        }
+      }
+
+      h3 {
+        color: white;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+
+      .description {
+        color: #888;
+        line-height: 1.6;
+        font-size: 1rem;
+        min-height: 60px;
+        margin-bottom: 1.5rem;
+      }
+
+      .stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        .stackItem {
+          background: rgba(255, 165, 0, 0.1);
+          color: orange;
+          padding: 0.4rem 0.8rem;
+          border-radius: 6px;
+          font-size: 0.85rem;
+          border: 1px solid rgba(255, 165, 0, 0.2);
+          cursor: default;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 165, 0, 0.05) 50%,
+        transparent 100%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  @include app.tablet {
+    padding: 3rem 1.5rem;
+    
+    .gridContainer {
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    .toolCard {
+      padding: 1.5rem;
+    }
+  }
+
+  @include app.mobile {
+    padding: 2rem 1rem;
+
+    .gridContainer {
+      grid-template-columns: 1fr;
+    }
+
+    .toolCard {
+      padding: 1.5rem;
+      
+      h3 { font-size: 1.4rem; }
+      .description { font-size: 0.95rem; }
+    }
+  }
+}
