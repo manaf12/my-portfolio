@@ -70,7 +70,7 @@ const Contact = () => {
           </div>
           <div className="info">
             <h2>Phone</h2>
-            <a href="tel:+8615275910297">+8615275910297</a>
+            <a href="tel:+8615275910297">+963991445188</a>
           </div>
         </motion.div>
       </motion.div>
